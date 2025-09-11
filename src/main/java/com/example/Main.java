@@ -12,7 +12,7 @@ public class Main {
         while(true){
             String arvaus = input.nextLine();
 
-            if (arvaus.equals(nimi)){
+            if (arvaus.equalsIgnoreCase(nimi)){
                 System.out.println("Onnea, arvasit oikein.");
                 break;
             } else {
