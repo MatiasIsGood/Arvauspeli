@@ -6,6 +6,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         String nimi = "Teppo";
+        int arvaukset = 0;
 
         System.out.println("Arvaa nimi: ");
 
@@ -15,11 +16,16 @@ public class Main {
             if (arvaus.equalsIgnoreCase(nimi)){
                 System.out.println("Onnea, arvasit oikein.");
                 break;
-            } else {
+            } else if(arvaus.equalsIgnoreCase("loppu")){
+                break;
+            }
+            else {
                 System.out.println("Väärin, yritä uudelleen.");
+                arvaukset++;
             }
 
         }
+        System.out.println("Sinä arvasit väärin " + arvaukset + " kertaa.");
         input.close();
     }
 }
